@@ -392,3 +392,23 @@ document.addEventListener("keydown", (event) => {
 // --- Start the game ---
 const myGame = new Game();
 myGame.gameLoop(0);
+
+// FULLSCREEN
+document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("fullscreenBtn");
+    console.log("Fullscreen button loaded:", btn); // debug
+
+    btn.addEventListener("click", () => {
+        console.log("Fullscreen button clicked"); // debug
+
+        const el = document.documentElement;
+
+        if (!document.fullscreenElement) {
+            el.requestFullscreen()
+                .then(() => console.log("Entered fullscreen"))
+                .catch(err => console.log("Fullscreen error:", err));
+        } else {
+            document.exitFullscreen();
+        }
+    });
+});

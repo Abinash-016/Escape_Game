@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no">
-    <title>|Escape Road Game|</title>
+    <title>Turbo ESC</title>
     <link rel="icon" href="logo.png">
 
 
@@ -17,6 +17,25 @@
 </head>
 
 <body class="dark">
+    <!-- Fullscreen Button -->
+    <style>
+        #fullscreenBtn {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 99999;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+
+    <button id="fullscreenBtn">⤢</button>
+
 
     <div id="unity-container" class="unity-desktop">
         <canvas id="unity-canvas" ...></canvas>
